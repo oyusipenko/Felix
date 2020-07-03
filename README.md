@@ -15,11 +15,11 @@ Front-End:
 HTML
 CSS
 JavaScript
+AJAX
+LocalStorage
 
 Back-End:
 Node.js
 Express.js
-
-Работает на LocalStorage
 
 Хостинг на Heroku
