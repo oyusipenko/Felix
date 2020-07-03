@@ -179,6 +179,7 @@ window.onload = function () {
     // ==================================
 
     function addTaskToArray() {
+        let taskTitle = document.querySelector("#addTaskText").value;
         let newTask = {
             "taskTitle": taskTitle,
             "project": "Inbox",
@@ -191,7 +192,6 @@ window.onload = function () {
     };
     function addTask() {
         document.querySelector("#addTask").onclick = function () {
-            taskTitle = document.querySelector("#addTaskText").value;
             addTaskToArray();
             makeTaskList("Active");
             document.querySelector("#left-menu-fullbackground").style.display = "none";
@@ -202,7 +202,6 @@ window.onload = function () {
     };
     function addTaskHome() {
         document.querySelector("#addTask").onclick = function () {  
-            taskTitle = document.querySelector("#addTaskText").value;
             addTaskToArray();
             document.querySelector("#left-menu-fullbackground").style.display = "none";
             document.querySelector("#popupTaskForm").style.display = "none";
@@ -211,8 +210,16 @@ window.onload = function () {
     };
     function addTaskFast() {
         document.querySelector("#addTaskFast").onclick = function () {  //Создание объекта-задачи и добавление его в массив и локальный масиив.
-            taskTitle = document.querySelector("#addTaskTextFast").value;
-            addTaskToArray();
+            let taskTitle = document.querySelector("#addTaskTextFast").value;
+            let newTask = {
+                "taskTitle": taskTitle,
+                "project": "Inbox",
+                "status": "Active"
+            }
+            let arrTaskList = JSON.parse(localStorage.getItem("arrTaskListLocal"));
+            if(arrTaskList == null) arrTaskList = [];
+            arrTaskList.push(newTask);
+            localStorage.setItem("arrTaskListLocal", JSON.stringify(arrTaskList));
             makeTaskList("Active");
         };
     };
