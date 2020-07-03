@@ -1,0 +1,37 @@
+@media screen and (max-width: 700px) {
+    /* #menu-top {
+        display: none;
+    }
+    #menu-top-small {
+        display: flex;
+    }
+    .btn-center {
+        width: 200px;
+    } */
+
+
+    #container-main {
+        grid-template-rows: 200px calc(100% - 200px);
+    }
+    #menu-top {
+        flex-direction: column;
+    }
+    #hide-top {
+        flex-direction: column;
+    }
+    .popup {
+        top: 45px;
+        left: 0;
+        width: 100%;
+    }
+    header {
+        height: 200px;
+    }
+    #menu-hide {
+        margin-right: 0px;
+        position: fixed;
+        left: 42px;
+        top: 8px;
+
+    }
+}

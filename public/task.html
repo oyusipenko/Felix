@@ -1,0 +1,47 @@
+<div id="nav">
+            <button class="btn-todo" id="openPopupTask">Добавить Задачу</button>
+            <div class="popup Task" id="popupTaskForm">
+                <form>
+                    <legend>Добавление задачи <i class="fas fa-times" id="closePopupTask"></i></legend>
+
+                        <p id="label1">Что нужно сделать:<br>
+                        <input id="addTaskText" type="text"  placeholder="..." >
+                        </p>
+                        <!-- <p id="label1">Выбрать проект:<br>
+                            <select type="text" class="selectProject" id="selectProject">
+                                
+                                <option value="main">Основной</option>
+                                <option value="work">Работа</option>
+                                <option value="study">Учеба</option>
+                            </select>
+                        </p> -->
+                        <button class="btn-todo btnFormAdd addTask" id="addTask" autofocus>Добавить Задачу</button>
+                </form>
+            </div>
+            <hr>
+            <!-- <button class="btn-todo">По проектам</button> -->
+            <button class="btn-todo" id="btnTaskActive">Активные Задачи</button>
+            <button class="btn-todo" id="btnTaskDone">Выполненные задачи</button>
+</div>
+<div id="article">
+            
+            <div class="taskContainerActive" id="taskContainerActive">
+                <div class="task-head ">
+                    <h1>Список задач к выполнению:</h1>
+                </div>
+                <div class="task-new-bottom">
+                    <form>
+                        <input id="addTaskTextFast" type="text" placeholder="Быстрое добавление задачи">
+                        <button class="btnTodoFast addTask" id="addTaskFast" autofocus>Добавить Задачу</button>
+                    </form>
+                </div>
+            </div>
+            <div class="taskContainerComplete" id="taskContainerComplete">
+                <div class="task-head ">
+                    <h1>Выполненные задачи:</h1>
+                </div>
+                <div class="task-new-bottom">
+                </div>
+            </div>
+            <div id="tableTask"></div>
+</div>

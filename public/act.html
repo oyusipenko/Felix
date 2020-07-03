@@ -1,0 +1,39 @@
+<div id="nav">
+        <button class="btn-todo" id="openPopupAct">Добавить Действие</button>
+        <div class="popup Act" id="popupActForm">
+            <form>
+                <legend>Добавление Действия<i class="fas fa-times" id="closePopupAct"></i></legend>
+                    <p id="label1">Название:<br>
+                    <input id="addActName" type="text"  placeholder="..." >
+                    </p>
+                    <p id="label1">Дата последнего события:<br>
+                        <input id="addActLastAct" type="date">
+                    </p>
+                    <p id="label1">Периодичность, в днях:<br>
+                        <input id="addActCycle" type="text"  placeholder="..." >
+                    </p>
+                    <button class="btn-todo btnFormAdd" id="addAct" autofocus>Добавить Действие</button>
+            </form>
+        </div>
+</div>
+<div id="article">
+        <div class="ActContainerFirst">
+            <h1>Список событий, которые <br>необходимо выполнять через определенный промежуток времени:</h1>
+            <table id="tableAct"></table>
+            <div class="popup Act" id="popupActFormEdit">
+                <form>
+                    <legend>Обновление Действия<i class="fas fa-times" id="closePopupActEdit"></i></legend>
+                        <p id="label1">Название:<br>
+                        <input id="addActNameEdit" type="text"  placeholder="..." >
+                        </p>
+                        <p id="label1">Дата последнего события:<br>
+                            <input id="addActLastActEdit" type="date">
+                        </p>
+                        <p id="label1">Периодичность, в днях:<br>
+                            <input id="addActCycleEdit" type="text"  placeholder="..." >
+                        </p>
+                        <button class="btn-todo btnFormAdd" id="addActEdit" autofocus>Обновить!</button>
+                </form>
+            </div>
+        </div>
+</div>

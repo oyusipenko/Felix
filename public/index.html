@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-media-850px.css">
+    <link rel="stylesheet" href="styles/style-media-700px.css">
+    <script src="https://kit.fontawesome.com/06c6028d4d.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    <div id="container-main">
+        <header>
+            <div id="hide-top">
+                <i class="fas fa-bars" id="menu-hide"></i>
+                <i class="fas fa-home" id="btnHome"></i>
+            </div>    
+            <div id="menu-top">
+                <a href="#" class="btn-center" id="btnTask">Задачи</a>
+                <a href="#" class="btn-center" id="btnTarget">Цели</a>
+                <a href="#" class="btn-center" id="btnHabbit">Привычки</a>
+                <a href="#" class="btn-center" id="btnAct">Действия</a>
+            </div>
+            <div id="menu-top-small">
+                <a href="#" class="btn-center">Вып. меню</a>
+            </div>
+            <div id="setting-top">
+                <i class="fas fa-cog" id="menu-set"></i>
+            </div>
+        </header>
+        <div id="left-menu-fullbackground"></div>
+        <nav>
+                <div id="nav">
+
+                    <button class="btn-todo" id="openPopupTask">Добавить Задачу</button>
+                    <div class="popup Task" id="popupTaskForm">
+                        <form>
+                            <legend>Добавление Задачи <i class="fas fa-times" id="closePopupTask"></i></legend>
+                                <p id="label1">Что нужно сделать:<br>
+                                <input id="addTaskText" type="text"  placeholder="..." >
+                                </p>
+                                <!-- <p id="label1">Выбрать проект:<br>
+                                    <select type="text" class="selectProject" id="selectProject">
+                                        
+                                        <option value="main">Основной</option>
+                                        <option value="work">Работа</option>
+                                        <option value="study">Учеба</option>
+                                    </select>
+                                </p> -->
+                                <button class="btn-todo btnFormAdd" id="addTask" autofocus>Добавить Задачу</button>
+                        </form>
+                    </div>
+
+                    <button class="btn-todo" id="openPopupTarget">Добавить Цель</button>
+                    <div class="popup Target" id="popupTargetForm">
+                        <form>
+                            <legend>Добавление Цели <i class="fas fa-times" id="closePopupTarget"></i></legend>
+                                <p id="label1">Название цели:<br>
+                                <input id="addTargetName" type="text"  placeholder="..." >
+                                </p>
+                                <p id="label1">Описание цели:<br>
+                                    <textarea id="addTargetDesc" placeholder="..." ></textarea>
+                                </p>
+                                <p id="label1">Критерий выполнения:<br>
+                                    <input id="addTargetDone" type="text"  placeholder="..." >
+                                </p>
+                                <button class="btn-todo btnFormAdd" id="addTarget" autofocus>Добавить Цель</button>
+                        </form>
+                    </div>
+
+                    <button class="btn-todo" id="openPopupHabbit">Добавить Привычку</button>
+                    <div class="popup Habbit" id="popupHabbitForm">
+                        <form>
+                            <legend>Добавление Привычки <i class="fas fa-times" id="closePopupHabbit"></i></legend>
+                                <p id="label1">Название Привычки:<br>
+                                <input id="addHabbitName" type="text"  placeholder="..." >
+                                </p>
+                                <p id="label1">Описание Привычки:<br>
+                                    <textarea id="addHabbitDesc" placeholder="..." ></textarea>
+                                </p>
+                                <p id="label1">Критерий выполнения:<br>
+                                    <input id="addHabbitDone" type="text"  placeholder="..." >
+                                </p>
+                                <button class="btn-todo btnFormAdd" id="addHabbit" autofocus>Добавить Привычку</button>
+                        </form>
+                    </div>
+                    <button class="btn-todo" id="openPopupAct">Добавить Действие</button>
+                    <div class="popup Act" id="popupActForm">
+                        <form>
+                            <legend>Добавление Действия<i class="fas fa-times" id="closePopupAct"></i></legend>
+                                <p id="label1">Название:<br>
+                                <input id="addActName" type="text"  placeholder="..." >
+                                </p>
+                                <p id="label1">Дата последнего события:<br>
+                                    <input id="addActLastAct" type="date">
+                                </p>
+                                <p id="label1">Периодичность, в днях:<br>
+                                    <input id="addActCycle" type="text"  placeholder="..." >
+                                </p>
+                                <button class="btn-todo btnFormAdd" id="addAct" autofocus>Добавить Действие</button>
+                        </form>
+                    </div>
+
+                    
+                </div>
+        </nav>
+        <article>
+                <div id="article">
+                    <div class="homeContainer">
+                        <div class="taskHome">
+                            <h4>Раздел "Задачи"</h4><br>
+
+                            <p>Список дел.</p><p>Ничего лишнего.</p><br>
+                            <p>Количество активных задач: <span id="homeTaskQ"></span></p><br>
+                        </div>
+                        <div class="targetHome">
+                            <h4>Раздел "Цели"</h4><br>
+
+                            <p>Здесь вы можете записать все свои цели, планировать выполнение и вести учет выполнения по дням</p><br>
+                            <p>Количество активных целей: <span id="homeTargetQ"></span></p><br>
+                        </div>
+                    </div>
+                    <div class="homeContainer">
+                        <div class="habbitHome">
+                            <h4>Раздел "Привычки"</h4><br>
+                            <p>Вырабатываем полезные привычки.</p><br>
+                            <p>Количество привычек в работе: <span id="homeHabbitQ"></span></p><br>
+                        </div>
+                        <div class="dateHome">
+                            <h4>Раздел "Действия"</h4><br>
+                            <p>Не забываем про однотипные события(например: менять фильтр на воду каждые 60 дней)</p><br>
+                            <p>Я контролирую <span id="homeActQ"></span></p><br>
+                        </div>
+                    </div>
+                </div>
+                <table id="table"></table>
+                <div id="tableTask"></div>
+        </article>
+    </div>
+</body>
+</html>

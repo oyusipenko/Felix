@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* ===================
+
+GRID MAIN CONTAINER
+
+=================== */
+
+#container-main {
+    display: grid;
+    grid-template-columns: 300px calc(100% - 300px);
+    grid-template-rows: 45px calc(100% - 45px);
+    grid-template-areas:
+    "header header"
+    "nav article";
+}
+
+/* ===================
+
+HEADER
+
+=================== */
+
+header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    background: #FF9000;
+    position: fixed;
+    height: 45px;
+    width: 100%;
+}
+
+/* LEFT BUTTONS */
+i {
+    padding: 5px;
+}
+#hide-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+#menu-hide {
+    margin-right: 15px;
+    transition: 0.3s;
+}
+#btnHome {
+    transition: 0.3s;
+}
+#menu-hide:hover, #btnHome:hover {
+    background: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#menu-hide:active, #btnHome:active {
+    background: #FF9000;
+    box-shadow: 0px 0px 5px #000;
+    border-radius: 5px;
+}
+
+/* CENTER BUTTONS */
+
+#menu-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#menu-top-small {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.btn-center {
+    width: 150px;
+    height: 100%;
+    margin:0 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 44px;
+    color:#000;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn-center:hover {
+    background: rgb(255, 206, 143); 
+    cursor: pointer;  
+}
+.btn-center:active {
+    background: linear-gradient( #FFB555, #FF9000) #FDBD32;
+}
+
+/* RIGHT BUTTONS */
+
+#setting-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    
+}
+#menu-set {
+    transition: 0.3s;
+}
+#menu-set:hover {
+    background: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#menu-set:active {
+    background: #FF9000;
+    box-shadow: 0px 0px 5px #000;
+    border-radius: 5px;
+}
+
+/* ===================
+
+NAVIGATION
+
+=================== */
+
+#nav {
+    grid-area: nav;
+    display: block;
+    background-color: #FAFAFA;
+    border-right: 1px solid #F0F0F0;
+    padding: 35px;
+    position: fixed;
+    height: calc(100% - 45px);
+    width: 300px;
+    margin-top: 45px;
+    z-index: 100;
+    text-align: center;
+    transition: 0.2s;
+}
+.btn-todo {
+    width: 200px;
+    border: none;
+    background: none;
+    padding: 10px 0;
+    border-top: 1px solid #A0A0A0;
+    border-bottom: 1px solid #A0A0A0;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.btn-todo:hover {
+    background: #FF9000;
+    cursor: pointer;  
+} 
+.btn-todo:active {
+    background: linear-gradient( #FFB555, #FF9000) #FDBD32;
+}
+#left-menu-fullbackground {
+    display: none;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 99;
+}
+hr {
+    margin-bottom: 20px;
+}
+/* ===================
+
+ARTICLE
+
+=================== */
+
+article {
+    grid-area: article;
+    padding: 35px;
+    width: inherit;
+}
+
+/* ===================
+
+HOME
+
+=================== */
+.homeContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.homeContainerLast {
+    text-decoration: underline;
+}
+.homeContainer p {
+    text-align: center;
+    margin: 0 15px; 
+}
+.taskHome, .targetHome, .habbitHome, .dateHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+/* ===================
+
+TASK
+
+=================== */
+
+.task-head {
+    margin: 0 auto; 
+    width: 70%;
+}
+
+.task-new-bottom {
+    margin: 10px auto;
+    width: 70%;
+}
+
+.tableTaskListContainer {
+    margin: 0 auto;
+    width: 70%;
+    border-bottom: 1px solid lightgray;
+}
+
+.tableTaskListCheckbox {
+    display: inline-block;
+}
+
+.tableTaskList {
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 0;
+    margin-left: 10px;
+}
+
+.tableTaskSecondButtonDel {
+    width: 150px;
+    height: 25px;
+    margin: 5px auto;
+    display: inline-block;
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.tableTaskSecondButtonDel:hover {
+    color: #FFF;
+    background: red;
+    cursor: pointer;  
+} 
+.tableTaskSecondButtonDel:active {
+    color: #FFF;
+    background: yellow;
+}
+#addTaskTextFast {
+    width: 100%;
+    border: 1px solid lightgray;
+    height: 25px;   
+    border-radius: 3px;
+    width: calc(100% - 125px);
+}
+
+/* #addTaskFast {
+    height: 25px;
+    width: 120px;
+} */
+.btnTodoFast {
+    width: 120px;
+    height: 25px;
+    /* margin: 5px auto; */
+    /* display: block; */
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.btnTodoFast:hover {
+    background: #FF9000;
+    cursor: pointer;  
+} 
+.btnTodoFast:active {
+    background: linear-gradient( #FFB555, #FF9000) #FDBD32;
+}
+.taskContainerComplete {
+    display: none;
+}
+
+
+/* ===================
+
+TARGET
+
+=================== */
+
+.targetContainer {
+    margin: 0 auto;
+    width: 90%;
+    min-width: 900px;
+}
+.tableTarget, td, tr{
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    border: 1px solid lightgray; 
+    text-align: center;
+    width: 100%;
+}
+td {
+    width: 25px;
+    cursor: pointer; 
+}
+.tableTargetSecond {
+    font-size: 16px;
+    margin: 20px 0;
+    border: 1px solid lightgray; 
+    text-align: center;
+    width: 100%;
+}
+.tableTargetSecondButton {
+    width: 150px;
+    height: 25px;
+    margin: 5px auto;
+    display: block;
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.tableTargetSecondButton:hover {
+    background: #FF9000;
+    cursor: pointer;  
+} 
+.tableTargetSecondButton:active {
+    background: linear-gradient( #FFB555, #FF9000) #FDBD32;
+}
+
+.note {
+    display: flex;
+    margin-top: 10px;
+}
+
+.note2 {
+    display: flex;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+}
+/* .targetDayNone {
+    background-color: ;
+} */
+.targetDayPlan {
+    background-color: #FF9000;
+}
+.targetDayDone {
+    background-color: lightgreen;
+}
+.tableTargetArticle {
+    text-align: center;
+}
+.targetContainerSecondActive, .targetContainerSecondComplete, .targetContainerSecondDeleted {
+    margin-top: 20px;
+}
+
+.tableTargetSecondButtonDel {
+    width: 150px;
+    height: 25px;
+    margin: 5px auto;
+    display: block;
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.tableTargetSecondButtonDel:hover {
+    color: #FFF;
+    background: red;
+    cursor: pointer;  
+} 
+.tableTargetSecondButtonDel:active {
+    color: #FFF;
+    background: yellow;
+}
+#targetContainerSecondComplete {
+    display: none;
+}
+#targetContainerSecondDeleted {
+    display: none;
+}
+/* ===================
+
+POP-UP
+
+=================== */
+
+.popup {
+    position: fixed;
+    display: none;
+    top: 80px;
+    left: calc(50% - 100px);
+    width: 350px;
+    border: 1px solid #F0F0F0;
+    background: #FAFAFA;
+    z-index: 100;
+    text-align: center;
+}
+.task {
+    height: 320px;
+}
+.target {
+    height: 420px;
+}
+.popup legend {
+    width: 100%;
+    background: linear-gradient( #FFB555, #FF9000) #FDBD32;
+    border-bottom: 1px solid #CFCFCF;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+}
+#label1 {
+    padding-top: 20px;
+    font-size: 18px;
+}
+.popup input {
+    margin-top: 15px;
+    width: 80%;
+    height: 30px;
+    font-size: 18px;
+}
+
+.btnFormAdd {
+    margin-top: 30px;
+}
+.selectProject {
+    margin-top: 15px;
+    width: 80%;
+    height: 30px;
+    font-size: 18px;
+}
+
+.fa-times {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transition: 0.3s;
+}
+
+.fa-times:hover {
+    background: #FFF;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+.fa-times:active {
+    background: #FF9000;
+    border-radius: 3px;
+}
+.popup textarea {
+    height: 150px;
+    width: 80%;
+    font-size: 14px;
+}
+
+/* ===================
+
+HABBIT - START
+
+=================== */
+
+.HabbitContainer {
+    margin: 0 auto;
+    width: 90%;
+    min-width: 900px;
+}
+.tableHabbit, td, tr{
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    border: 1px solid lightgray; 
+    text-align: center;
+    width: 100%;
+}
+td {
+    width: 25px;
+    cursor: pointer; 
+}
+.tableHabbitSecond {
+    font-size: 16px;
+    margin: 20px 0;
+    border: 1px solid lightgray; 
+    text-align: center;
+    width: 100%;
+}
+.tableHabbitSecondButton {
+    width: 150px;
+    height: 25px;
+    margin: 5px auto;
+    display: block;
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.tableHabbitSecondButton:hover {
+    background: #FF9000;
+    cursor: pointer;  
+} 
+.tableHabbitSecondButton:active {
+    background: linear-gradient( #FFB555, #FF9000) #FDBD32;
+}
+
+.note {
+    display: flex;
+}
+
+.note2 {
+    display: flex;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+}
+/* .HabbitDayNone {
+    background-color: ;
+} */
+.HabbitDayPlan {
+    background-color: #FF9000;
+}
+.HabbitDayDone {
+    background-color: lightgreen;
+}
+.tableHabbitArticle {
+    text-align: center;
+}
+.HabbitContainerSecondActive, .HabbitContainerSecondComplete, .HabbitContainerSecondDeleted {
+    margin-top: 20px;
+}
+
+.tableHabbitSecondButtonDel {
+    width: 150px;
+    height: 25px;
+    margin: 5px auto;
+    display: block;
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.tableHabbitSecondButtonDel:hover {
+    color: #FFF;
+    background: red;
+    cursor: pointer;  
+} 
+.tableHabbitSecondButtonDel:active {
+    color: #FFF;
+    background: yellow;
+}
+#HabbitContainerSecondComplete {
+    display: none;
+}
+#HabbitContainerSecondDeleted {
+    display: none;
+}
+
+/* ===================
+
+HABBIT - END
+
+=================== */
+
+/* ===================
+
+ACT - START
+
+=================== */
+.ActContainerFirst {
+    margin:0 auto;
+    width: 70%;
+
+
+}
+#tableAct {
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    border: 1px solid lightgray; 
+    text-align: center;
+    
+}
+.tableActButton {
+    width: 150px;
+    height: 25px;
+    margin: 5px auto;
+    display: block;
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.tableActButton:hover {
+    background: #FF9000;
+    cursor: pointer;  
+} 
+.tableActButton:active {
+    background: linear-gradient( #FFB555, #FF9000) #FDBD32;
+}
+.tableActButtonDel {
+    width: 150px;
+    height: 25px;
+    margin: 5px auto;
+    display: block;
+    border: none;
+    background: none;
+    border: 1px solid #A0A0A0;
+    color: #000;
+    font-weight: 700;
+    outline: none;
+    transition: 0.5s;
+}
+.tableActButtonDel:hover {
+    color: #FFF;
+    background: red;
+    cursor: pointer;  
+} 
+.tableActButtonDel:active {
+    color: #FFF;
+    background: yellow;
+}
+
+/* ===================
+
+ACT - END
+
+=================== */

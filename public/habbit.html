@@ -1,0 +1,65 @@
+<div id="nav">
+        <button class="btn-todo" id="openPopupHabbit">Добавить Привычку</button>
+        <div class="popup Habbit" id="popupHabbitForm">
+            <form>
+                <legend>Добавление Привычки <i class="fas fa-times" id="closePopupHabbit"></i></legend>
+                    <p id="label1">Название:<br>
+                    <input id="addHabbitName" type="text"  placeholder="..." >
+                    </p>
+                    <p id="label1">Описание:<br>
+                        <textarea id="addHabbitDesc" placeholder="..." ></textarea>
+                    </p>
+                    <p id="label1">Критерий выполнения:<br>
+                        <input id="addHabbitDone" type="text"  placeholder="..." >
+                    </p>
+                    <button class="btn-todo btnFormAdd" id="addHabbit" autofocus>Добавить!</button>
+            </form>
+        </div>
+        <hr>
+        <button class="btn-todo" id="HabbitActive">Активные привычки</button>
+        <button class="btn-todo" id="HabbitСopmlete">Выполненные привычки</button>
+        <button class="btn-todo" id="HabbitDeleted">Удаленные привычки</button>
+</div>
+<div id="article">
+            <div class="HabbitContainerFirst">
+                <h1>Список привычек к работе над собой:</h1>
+                <h2 class="tableHabbitArticle"><i class="fas fa-arrow-left"></i>&nbsp&nbspТекущий месяц&nbsp&nbsp<i class="fas fa-arrow-right"></i></h2>
+                <table class="tableHabbit" id="tableHabbit"></table>
+                <div class="note">
+                    <p>
+                        *&nbsp<div class="HabbitDayNone note2">-</div>&nbsp- ничего;&nbsp
+                        <div class="HabbitDayPlan note2">&#10025</div>&nbsp- запланированное дейстиве;&nbsp
+                        <div class="HabbitDayDone note2">&#10003</div>&nbsp- выполнено;&nbsp
+                    </p> 
+                    </div>
+                <script src="scripts/script.js"></script>
+            </div>
+    
+            <div class="HabbitContainerSecondActive" id="HabbitContainerSecondActive">
+                <h3>Список в работе:</h3>
+            </div>
+            <div class="HabbitContainerSecondComplete" id="HabbitContainerSecondComplete">
+                <h3>Список приобретенных привычек:</h3>
+            </div>
+            <div class="HabbitContainerSecondDeleted" id="HabbitContainerSecondDeleted">
+                <h3>Список удаленных привычек:</h3>
+            </div>
+            <div class="HabbitContainerThird">
+                <table class="tableHabbitSecond" id="tableHabbitSecond"></table>
+                <div class="popup Habbit" id="popupHabbitFormEdit">
+                    <form>
+                        <legend>Редактирование Привычки <i class="fas fa-times" id="closePopupHabbitEdit"></i></legend>
+                            <p id="label1">Название:<br>
+                            <input id="addHabbitNameEdit" type="text"  placeholder="...">
+                            </p>
+                            <p id="label1">Описание:<br>
+                                <textarea id="addHabbitDescEdit" placeholder="..." ></textarea>
+                            </p>
+                            <p id="label1">Критерий выполнения:<br>
+                                <input id="addHabbitDoneEdit" type="text"  placeholder="..." >
+                            </p>
+                            <button class="btn-todo btnFormAdd" id="addHabbitEdit" autofocus>Редактировать</button>
+                    </form>
+            </div>
+        </div>
+</div>

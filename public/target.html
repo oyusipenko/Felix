@@ -1,0 +1,65 @@
+<div id="nav">
+        <button class="btn-todo" id="openPopupTarget">Добавить Цель</button>
+        <div class="popup Target" id="popupTargetForm">
+            <form>
+                <legend>Добавление Цели <i class="fas fa-times" id="closePopupTarget"></i></legend>
+                    <p id="label1">Название цели:<br>
+                    <input id="addTargetName" type="text"  placeholder="..." >
+                    </p>
+                    <p id="label1">Описание цели:<br>
+                        <textarea id="addTargetDesc" placeholder="..." ></textarea>
+                    </p>
+                    <p id="label1">Критерий выполнения:<br>
+                        <input id="addTargetDone" type="text"  placeholder="..." >
+                    </p>
+                    <button class="btn-todo btnFormAdd" id="addTarget" autofocus>Добавить Цель</button>
+            </form>
+        </div>
+        <hr>
+        <button class="btn-todo" id="targetActive">Активные цели</button>
+        <button class="btn-todo" id="targetСopmlete">Выполненные цели</button>
+        <button class="btn-todo" id="targetDeleted">Удаленные цели</button>
+</div>
+<div id="article">
+        <div class="targetContainerFirst">
+            <h1>Список целей к следованию:</h1>
+            <h2 class="tableTargetArticle"><i class="fas fa-arrow-left"></i>&nbsp&nbspТекущий месяц&nbsp&nbsp<i class="fas fa-arrow-right"></i></h2>
+            <table class="tableTarget" id="tableTarget"></table>
+            <div class="note">
+                <p>
+                    *&nbsp<div class="targetDayNone note2">-</div>&nbsp- ничего;&nbsp
+                    <div class="targetDayPlan note2">&#10025</div>&nbsp- запланированное дейстиве;&nbsp
+                    <div class="targetDayDone note2">&#10003</div>&nbsp- выполнено;&nbsp
+                </p> 
+                </div>
+            <script src="scripts/script.js"></script>
+        </div>
+
+        <div class="targetContainerSecondActive" id="targetContainerSecondActive">
+            <h3>Список активных целей:</h3>
+        </div>
+        <div class="targetContainerSecondComplete" id="targetContainerSecondComplete">
+            <h3>Список выполненных целей:</h3>
+        </div>
+        <div class="targetContainerSecondDeleted" id="targetContainerSecondDeleted">
+            <h3>Список удаленных целей:</h3>
+        </div>
+        <div class="targetContainerThird">
+            <table class="tableTargetSecond" id="tableTargetSecond"></table>
+            <div class="popup Target" id="popupTargetFormEdit">
+                <form>
+                    <legend>Редактирование Цели <i class="fas fa-times" id="closePopupTargetEdit"></i></legend>
+                        <p id="label1">Название цели:<br>
+                        <input id="addTargetNameEdit" type="text"  placeholder="...">
+                        </p>
+                        <p id="label1">Описание цели:<br>
+                            <textarea id="addTargetDescEdit" placeholder="..." ></textarea>
+                        </p>
+                        <p id="label1">Критерий выполнения:<br>
+                            <input id="addTargetDoneEdit" type="text"  placeholder="..." >
+                        </p>
+                        <button class="btn-todo btnFormAdd" id="addTargetEdit" autofocus>Редактировать</button>
+                </form>
+        </div>
+        </div>
+</div>
