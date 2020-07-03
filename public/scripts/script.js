@@ -211,15 +211,15 @@ window.onload = function () {
     function addTaskFast() {
         document.querySelector("#addTaskFast").onclick = function () {  //Создание объекта-задачи и добавление его в массив и локальный масиив.
             let taskTitle = document.querySelector("#addTaskTextFast").value;
-            let newTask = {
-                "taskTitle": taskTitle,
-                "project": "Inbox",
-                "status": "Active"
-            }
-            let arrTaskList = JSON.parse(localStorage.getItem("arrTaskListLocal"));
-            if(arrTaskList == null) arrTaskList = [];
-            arrTaskList.push(newTask);
-            localStorage.setItem("arrTaskListLocal", JSON.stringify(arrTaskList));
+                    let newTask = {
+            "taskTitle": taskTitle,
+            "project": "Inbox",
+            "status": "Active"
+        }
+        let arrTaskList = JSON.parse(localStorage.getItem("arrTaskListLocal"));
+        if(arrTaskList == null) arrTaskList = [];
+        arrTaskList.push(newTask);
+        localStorage.setItem("arrTaskListLocal", JSON.stringify(arrTaskList));
             makeTaskList("Active");
         };
     };
