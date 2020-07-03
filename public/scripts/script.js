@@ -63,19 +63,19 @@ window.onload = function () {
         }
     };
     document.querySelector("#btnHome").onclick = function() {
-        singlePageChange("https://oyusipenko.github.io/To-Do-list/index.html", btnHome);
+        singlePageChange("/index.html", btnHome);
     };
     document.querySelector("#btnTask").onclick = function() {
-        singlePageChange("https://oyusipenko.github.io/To-Do-list/task.html", btnTask);
+        singlePageChange("/task.html", btnTask);
     };
     document.querySelector("#btnTarget").onclick = function() {
-        singlePageChange("https://oyusipenko.github.io/To-Do-list/target.html", btnTarget);
+        singlePageChange("/target.html", btnTarget);
     };
     document.querySelector("#btnHabbit").onclick = function() {
-        singlePageChange("https://oyusipenko.github.io/To-Do-list/habbit.html", btnHabbit);
+        singlePageChange("/habbit.html", btnHabbit);
     };
     document.querySelector("#btnAct").onclick = function() {
-        singlePageChange("https://oyusipenko.github.io/To-Do-list/act.html", btnAct);
+        singlePageChange("/act.html", btnAct);
     };
     // ==================================
     // AJAX - END
