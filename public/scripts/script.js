@@ -177,7 +177,7 @@ window.onload = function () {
     // ==================================
     // TASK - START
     // ==================================
-    let taskTitle = document.querySelector("#addTaskText").value;
+
     function addTaskToArray() {
         let newTask = {
             "taskTitle": taskTitle,
@@ -191,6 +191,7 @@ window.onload = function () {
     };
     function addTask() {
         document.querySelector("#addTask").onclick = function () {
+            taskTitle = document.querySelector("#addTaskText").value;
             addTaskToArray();
             makeTaskList("Active");
             document.querySelector("#left-menu-fullbackground").style.display = "none";
@@ -201,6 +202,7 @@ window.onload = function () {
     };
     function addTaskHome() {
         document.querySelector("#addTask").onclick = function () {  
+            taskTitle = document.querySelector("#addTaskText").value;
             addTaskToArray();
             document.querySelector("#left-menu-fullbackground").style.display = "none";
             document.querySelector("#popupTaskForm").style.display = "none";
