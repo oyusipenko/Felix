@@ -18,10 +18,6 @@ JavaScript
 AJAX
 LocalStorage
 
-Back-End:
-Node.js
-Express.js
-
 Хостинг на Heroku
 
 Следующий этап: сделать чтобы все работало на FrontEnd фреймворке, подключить MongoDB и сделать авторизацию.
