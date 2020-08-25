@@ -2,22 +2,13 @@
 
 https://felix9.herokuapp.com/
 
-В программу входит 4 раздела:
+The program has 4 sections:.
+- To-do list.
+- Target Planner.
+- Habit Planner.
+- Actions.
+For the program has used:.
+Front-End: HTML CSS JavaScript AJAX Localstorage.
+Hosting on Heroku.
 
-1) Список дел
-2) Планировщик целей
-3) Планировщик привычек
-4) Учет действий, событий
-
-Для программы было использовано:
-
-Front-End:
-HTML
-CSS
-JavaScript
-AJAX
-LocalStorage
-
-Хостинг на Heroku
-
-Следующий этап: сделать чтобы все работало на FrontEnd фреймворке, подключить MongoDB и сделать авторизацию.
+Next step: сreate application on the Frontend framework, connect Mongodb and make an authorization
